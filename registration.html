@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Registration</title>
+  <link rel="stylesheet" href="./styles/registration.css" />
+</head>
+<body>
+<div class="register-container">
+  <h2>Create Your Account</h2>
+  <form id="registrationForm">
+    <label >Full Name</label>
+    <input type="text" name="name" required />
+    <label >Email</label>
+    <input type="email" name="email" required />
+    <label >Mobile Number</label>
+    <input type="tel" name="mobile" required />
+    <label >Password</label>
+    <input type="password" name="password" required />
+    <label >Date of Birth</label>
+    <input type="date" name="dob" required />
+    <label >Upload ID (for age verification)</label>
+    <input type="file" id="idUpload" name="government_id_image" accept="image/*">
+    <img id="idPreview" src="#" alt="ID Preview" style="display: none;"/>
+
+    <div class="social-buttons">
+        <button type="button" class="google">Google</button>
+        <button type="button" class="facebook">Facebook</button>
+    </div>
+
+    <button type="submit">Register</button>
+    </form>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./scripts/registration.js"></script>
+</body>
+</html>

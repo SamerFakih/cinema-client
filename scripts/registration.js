@@ -4,7 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const formData = new FormData(form);
+    const fileInput = document.getElementById("government_id_image");
+      if (!fileInput || !fileInput.files.length) {
+      alert("Please select a photo.");
+      return;
+    }
+    const file = fileInput.files[0];
+    console.log("Selected file:", file);
+    if (!file) {
+      return alert("Please choose an image");
+    }
+
+
+    const formData = new FormData();
+    formData.append("name",document.getElementById("name").value);
+    formData.append("email",document.getElementById("email").value);
+    formData.append("mobile",document.getElementById("mobile").value);
+    formData.append("password",document.getElementById("password").value);
+    formData.append("dob",document.getElementById("dob").value );
+    formData.append("government_id_image",file);
 
     axios.post('http://localhost/Cinema_server/controllers/registration_user.php', formData, {
       headers: {

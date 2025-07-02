@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Smart Cinema</title>
+    <link rel="stylesheet" href="./styles/admin.css">
+</head>
+<body>
+<div class="admin-panel">
+    <aside class="admin-sidebar">
+        <h3>Admin Panel</h3>
+        <ul>
+        <li><a href="#" onclick="showTab('films')">Manage Films</a></li>
+        </ul>
+    </aside>
+
+    <div class="admin-content">
+    <form id="films" enctype="multipart/form-data" class="admin-section active">
+        <h2>Manage Films</h2>
+        <label for="">Title</label>
+        <input type="text" id="title" name="title" placeholder="Movie Title" required>
+        <label>Description</label>
+        <input type="text" id="description" name="description" placeholder="Short description..." required>
+        <label>Release Date</label>
+        <input type="date" id="release_date" name="release_date" required>
+        <label>Duration (minutes)</label>
+        <input type="number" id="duration" name="duration" required>
+        <label>Rating</label>
+        <input type="number" id="rating" name="rating" required>
+        <label>Image</label>
+        <input type="file" id="file" name="image" required>
+        <label>Trailer URL</label>
+        <input type="text" id="url" name="url" required>
+        <label>Auditorium ID</label>
+        <input type="number" id="auditorium_id" name="auditorium_id" required>
+        <button>Add Film</button>
+    </form>
+    </div>
+</div>
+<script src="./scripts/admin.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form);
 
-        axios.post('http://localhost/Cinema_server/controllers/login_user.php', formData)
+        axios.post('http://localhost/Cinema_server/login', formData)
             .then(response => {
                 console.log(response.data);
                 if (response.data.status === "success") {

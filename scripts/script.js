@@ -2,7 +2,7 @@ const slider = document.getElementById('movieSlider');
 
 async function fetchMovies() {
     try {
-      const response = await axios.get('http://localhost/Cinema_server/controllers/get_movies.php');
+      const response = await axios.get('http://localhost/Cinema_server/movie');
       console.log('Movies:', response.data);
       const movies = response.data.data
       if (Array.isArray(movies)) {

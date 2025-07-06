@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function (){
     formData.append("url",document.getElementById("url").value);
     formData.append("auditorium_id",document.getElementById("auditorium_id").value);
 
-    axios.post('http://localhost/Cinema_server/controllers/add_movie.php',formData,
+    axios.post('http://localhost/Cinema_server/add_movie',formData,
         {
         headers: {
             'Content-Type': 'multipart/form-data'
